@@ -4,8 +4,9 @@ import json
 import os
 import re
 import sys
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 from pathlib import Path
+from typing import Dict, List, Optional
 
 
 ROOT = Path.cwd()
@@ -74,8 +75,8 @@ def read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
-def walk(root: Path) -> list[Path]:
-    output: list[Path] = []
+def walk(root: Path) -> List[Path]:
+    output = []
     for dir_path, dir_names, file_names in os.walk(root):
         dir_names[:] = sorted(name for name in dir_names if name not in SKIP_DIRS)
         for file_name in sorted(file_names):
@@ -84,7 +85,7 @@ def walk(root: Path) -> list[Path]:
     return sorted(output)
 
 
-def extract_meta(source: str, key: str) -> str | None:
+def extract_meta(source: str, key: str) -> Optional[str]:
     match = re.search(rf"<!--\s*{re.escape(key)}:\s*(.*?)\s*-->", source)
     if not match:
         return None
@@ -190,9 +191,9 @@ def build_structured_data(page: dict) -> str:
     return value.replace("<", "\\u003c")
 
 
-def validate_page(file_path: Path, source: str) -> dict:
+def validate_page(file_path: Path, source: str) -> Dict:
     relative_path = file_path.relative_to(ROOT).as_posix()
-    errors: list[str] = []
+    errors = []
     top_count = source.count(START_MARKER)
     bottom_count = source.count(END_MARKER)
 
@@ -232,7 +233,7 @@ def validate_page(file_path: Path, source: str) -> dict:
         for label, value in (("published", published), ("updated", updated)):
             if value:
                 try:
-                    date.fromisoformat(value)
+                    datetime.strptime(value, "%Y-%m-%d")
                 except ValueError:
                     errors.append(f"article {label} date must use YYYY-MM-DD")
 
@@ -263,10 +264,10 @@ def validate_page(file_path: Path, source: str) -> dict:
     }
 
 
-def validate_unique_meta(pages: list[dict]) -> list[str]:
-    errors: list[str] = []
+def validate_unique_meta(pages: List[Dict]) -> List[str]:
+    errors = []
     for field in ("title", "description"):
-        seen: dict[str, str] = {}
+        seen = {}
         for page in pages:
             value = page[field]
             if value in seen:

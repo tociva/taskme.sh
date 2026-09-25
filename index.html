@@ -222,6 +222,92 @@
                   <text x="369" y="634">End</text>
                 </g>
               </svg>
+              <svg class="workflow-diagram workflow-diagram-mobile" viewBox="0 0 360 830" role="img" aria-labelledby="ledger-workflow-mobile-title ledger-workflow-mobile-description">
+                <title id="ledger-workflow-mobile-title">Books completion workflow</title>
+                <desc id="ledger-workflow-mobile-description">The workflow starts by fetching five accounting sources in parallel. The results merge into an interactive agent that analyzes the books and creates missing entries. It then creates supporting journals and ends.</desc>
+                <defs>
+                  <marker id="workflow-arrow-mobile" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8f9bad"></path>
+                  </marker>
+                </defs>
+
+                <g class="workflow-connectors" fill="none" stroke="#aeb9c8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M180 63 V88"></path>
+                  <path d="M180 374 V392" marker-end="url(#workflow-arrow-mobile)"></path>
+                  <path d="M180 440 V470" marker-end="url(#workflow-arrow-mobile)"></path>
+                  <path d="M180 632 V666" marker-end="url(#workflow-arrow-mobile)"></path>
+                  <path d="M180 730 V766" marker-end="url(#workflow-arrow-mobile)"></path>
+                </g>
+
+                <g class="workflow-flow-animation" aria-hidden="true">
+                  <path class="flow-stage-1" d="M180 63 V88"></path>
+                  <path class="flow-stage-2" d="M180 374 V392"></path>
+                  <path class="flow-stage-4" d="M180 440 V470"></path>
+                  <path class="flow-stage-5" d="M180 632 V666"></path>
+                  <path class="flow-stage-6" d="M180 730 V766"></path>
+                </g>
+
+                <g class="workflow-start">
+                  <rect x="127" y="21" width="106" height="42" rx="21"></rect>
+                  <circle cx="151" cy="42" r="5"></circle>
+                  <text x="169" y="47">Start</text>
+                </g>
+
+                <rect class="workflow-parallel-group" x="10" y="88" width="340" height="286" rx="18"></rect>
+                <text class="workflow-parallel-label" x="180" y="108" text-anchor="middle">5 SOURCES · FETCHED IN PARALLEL</text>
+                <g class="workflow-tool-node" transform="translate(22 118)">
+                  <rect width="150" height="66" rx="12"></rect>
+                  <text class="workflow-node-label" x="14" y="23">API tool</text>
+                  <text class="workflow-node-title" x="14" y="47">Bank transactions</text>
+                </g>
+                <g class="workflow-tool-node" transform="translate(188 118)">
+                  <rect width="150" height="66" rx="12"></rect>
+                  <text class="workflow-node-label" x="14" y="23">API tool</text>
+                  <text class="workflow-node-title" x="14" y="47">Payments</text>
+                </g>
+                <g class="workflow-tool-node" transform="translate(22 202)">
+                  <rect width="150" height="66" rx="12"></rect>
+                  <text class="workflow-node-label" x="14" y="23">API tool</text>
+                  <text class="workflow-node-title" x="14" y="47">Receipts</text>
+                </g>
+                <g class="workflow-tool-node" transform="translate(188 202)">
+                  <rect width="150" height="66" rx="12"></rect>
+                  <text class="workflow-node-label" x="14" y="23">API tool</text>
+                  <text class="workflow-node-title" x="14" y="47">Contra entries</text>
+                </g>
+                <g class="workflow-tool-node" transform="translate(22 286)">
+                  <rect width="150" height="66" rx="12"></rect>
+                  <text class="workflow-node-label" x="14" y="23">API tool</text>
+                  <text class="workflow-node-title" x="14" y="47">Journals</text>
+                </g>
+
+                <g class="workflow-merge">
+                  <path d="M180 392 L204 416 L180 440 L156 416 Z"></path>
+                  <text x="180" y="420" text-anchor="middle">Merge</text>
+                </g>
+
+                <g class="workflow-agent-node">
+                  <rect x="22" y="470" width="316" height="162" rx="18"></rect>
+                  <image href="/assets/taskmesh-small.svg" x="42" y="492" width="48" height="48"></image>
+                  <text class="workflow-agent-label" x="106" y="500">Interactive agent</text>
+                  <text class="workflow-agent-title" x="106" y="529"><tspan x="106">Analyze and create</tspan><tspan x="106" dy="21">missing entries</tspan></text>
+                  <text class="workflow-agent-items" x="42" y="586"><tspan>Payments</tspan><tspan dx="16">Receipts</tspan><tspan dx="16">Contra</tspan></text>
+                  <rect class="workflow-agent-status" x="42" y="600" width="142" height="18" rx="9"></rect>
+                  <text class="workflow-agent-status-text" x="113" y="613" text-anchor="middle">Human-guided analysis</text>
+                </g>
+
+                <g class="workflow-journal-node">
+                  <rect x="47" y="666" width="266" height="64" rx="14"></rect>
+                  <text class="workflow-node-label" x="67" y="691">Accounting action</text>
+                  <text class="workflow-node-title" x="67" y="713">Create supporting journals</text>
+                </g>
+
+                <g class="workflow-end">
+                  <rect x="127" y="766" width="106" height="42" rx="21"></rect>
+                  <circle cx="151" cy="787" r="5"></circle>
+                  <text x="169" y="792">End</text>
+                </g>
+              </svg>
             </div>
             <figcaption class="workflow-caption">The animated path shows execution order; five accounting sources are fetched in parallel before analysis begins.</figcaption>
           </figure>

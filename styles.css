@@ -761,6 +761,10 @@
       sans-serif;
   }
 
+  .workflow-diagram-mobile {
+    display: none;
+  }
+
   .workflow-flow-animation {
     filter: drop-shadow(0 0 2px rgba(89, 71, 231, 0.3));
     pointer-events: none;
@@ -882,6 +886,20 @@
     fill: var(--ink);
     font-size: 13px;
     font-weight: 750;
+  }
+
+  .workflow-parallel-label {
+    fill: var(--muted);
+    font-size: 9px;
+    font-weight: 820;
+    letter-spacing: 0.08em;
+  }
+
+  .workflow-parallel-group {
+    fill: rgba(255, 255, 255, 0.42);
+    stroke: #cbd4e0;
+    stroke-dasharray: 4 5;
+    stroke-width: 1.5;
   }
 
   .workflow-merge path {
@@ -1953,9 +1971,19 @@
       border-top: 0;
     }
 
-    .workflow-diagram {
-      width: 42rem;
-      max-width: none;
+    .workflow-svg-wrap {
+      overflow-x: hidden;
+    }
+
+    .workflow-diagram:not(.workflow-diagram-mobile) {
+      display: none;
+    }
+
+    .workflow-diagram-mobile {
+      display: block;
+      width: 100%;
+      max-width: 27rem;
+      margin-inline: auto;
     }
 
     .scenario {
