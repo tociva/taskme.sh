@@ -1,0 +1,90 @@
+<!-- title: Product | Taskmesh AI Workflow Platform -->
+<!-- description: Explore the Taskmesh platform for composing AI workflows, publishing stable versions, managing approvals, connecting tools, and inspecting every run. -->
+<!-- nav: product -->
+
+<!-- taskmesh top section -->
+    <main id="main-content">
+      <section class="page-hero">
+        <div class="shell">
+          <p class="eyebrow">The Taskmesh platform</p>
+          <h1>From workflow idea to governed execution.</h1>
+          <p class="lede">Build with agents, tools, logic, and people. Publish stable versions. Run with the right credentials. Inspect every outcome.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="#capabilities">Explore capabilities</a>
+            <a class="button button-secondary" href="/integrations.html">View integrations</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="capabilities">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Compose visually</p>
+            <h2>Model the full process, not just the AI prompt.</h2>
+            <p>Taskmesh turns a business process into an explicit graph where each node has a clear role, contract, and place in the run history.</p>
+          </div>
+          <div class="four-grid usecase-grid">
+            <article class="info-card"><span class="card-icon">AI</span><h3>Agent nodes</h3><p>Apply model reasoning to analysis, classification, summarization, and other judgment-heavy steps.</p></article>
+            <article class="info-card"><span class="card-icon">API</span><h3>Tool nodes</h3><p>Invoke approved operations through configured connections and explicit input mappings.</p></article>
+            <article class="info-card"><span class="card-icon">H</span><h3>Human tasks</h3><p>Pause execution for review, collect a decision, and continue with recorded context.</p></article>
+            <article class="info-card"><span class="card-icon">IF</span><h3>Control flow</h3><p>Branch, switch, merge, loop, delay, or accept the first usable result.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section page-section-soft">
+        <div class="shell split-section">
+          <div class="section-heading">
+            <p class="eyebrow">Safe evolution</p>
+            <h2>Draft freely. Publish deliberately.</h2>
+            <p>Workflow authoring and production execution are separate concerns. Publishing creates a stable version so later edits cannot silently change a running business process.</p>
+            <div class="pill-list"><span>Draft validation</span><span>Versioned schemas</span><span>Immutable releases</span><span>Scoped publishing</span></div>
+          </div>
+          <div class="comparison-grid" aria-label="Workflow draft and published version comparison">
+            <div class="comparison-label">Draft</div><div class="comparison-label">Published version</div>
+            <div><p>Designed and tested by authorized builders.</p></div><div><p>Immutable definition selected for controlled execution.</p></div>
+            <div><p>May change as the team improves the process.</p></div><div><p>Preserves the exact graph, operations, and code revision.</p></div>
+            <div><p>Validation surfaces missing mappings and configuration.</p></div><div><p>Runtime inputs are checked against a stable contract.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Execution visibility</p>
+            <h2>Understand what happened at every node.</h2>
+            <p>A workflow run is more than a final answer. Taskmesh preserves the path, status, structured outputs, human decisions, and failure context needed to operate responsibly.</p>
+          </div>
+          <div class="feature-list">
+            <article class="feature-row"><h3>Live run state</h3><p>Follow progress through the graph and see which step is running, waiting, complete, or unsuccessful.</p></article>
+            <article class="feature-row"><h3>Node-level inspection</h3><p>Review structured inputs and outputs without reducing the workflow to a single opaque response.</p></article>
+            <article class="feature-row"><h3>Human decision context</h3><p>Keep the request, reviewer choice, and resulting continuation associated with the workflow run.</p></article>
+            <article class="feature-row"><h3>Stable output contracts</h3><p>Use versioned result envelopes and explicit merge strategies to make downstream behavior predictable.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section page-section-dark">
+        <div class="shell split-section">
+          <div class="section-heading">
+            <p class="eyebrow">Secure Python tool</p>
+            <h2>Use code for computation without turning it into unrestricted access.</h2>
+            <p>Authors can write a focused Python function for data processing. Publishing pins an immutable revision, and execution happens in a dedicated sandbox without network, credentials, resources, or a mutable root filesystem.</p>
+          </div>
+          <div class="capability-stack">
+            <article class="capability-card"><span class="card-icon">01</span><div><h3>Pure computation</h3><p>Use JSON input with Python, NumPy, and pandas for controlled data work.</p></div></article>
+            <article class="capability-card"><span class="card-icon">02</span><div><h3>Separated permissions</h3><p>Authoring, testing, viewing source, and publishing remain distinct capabilities.</p></div></article>
+            <article class="capability-card"><span class="card-icon">03</span><div><h3>Isolated runtime</h3><p>No network access, credential access, resource mounting, or native fallback.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="shell callout">
+          <div><h2>Connect Taskmesh to the systems your work depends on.</h2><p>Turn published API operations and data tools into reusable workflow building blocks.</p></div>
+          <div class="button-row"><a class="button button-primary" href="/integrations.html">Explore integrations <span aria-hidden="true">→</span></a></div>
+        </div>
+      </section>
+    </main>
+<!-- taskmesh bottom section -->

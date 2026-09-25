@@ -1,0 +1,43 @@
+# Taskmesh
+
+> Taskmesh is a governed AI workflow orchestration platform for building, approving, running, and monitoring business workflows that combine agents, tools, APIs, deterministic logic, secure Python computation, and human decisions.
+
+Canonical site: https://taskme.sh/
+
+## Core product
+
+- Visual workflow composition with agents, tools, decisions, switches, loops, delays, merges, and human tasks.
+- Draft validation and immutable published workflow versions.
+- Organization-scoped users, workflows, tools, credentials, permissions, and runs.
+- Human approval checkpoints before sensitive actions.
+- Node-level workflow-run history and audit context.
+- Custom API operations through published external APIs.
+- JSON extraction and transformation tools.
+- Sandboxed Python computation without network or credential access.
+
+## Important pages
+
+- [Homepage](https://taskme.sh/): Product overview and core positioning.
+- [Product](https://taskme.sh/product.html): Workflow composition, publishing, execution, and inspection.
+- [Security](https://taskme.sh/security.html): Access boundaries, approvals, auditability, integrations, and Python isolation.
+- [Integrations](https://taskme.sh/integrations.html): API operations, connections, JSON tools, and Python computation.
+- [Use cases](https://taskme.sh/use-cases.html): Finance reconciliation, approval-driven actions, data operations, and internal assistants.
+- [Blog](https://taskme.sh/blog/): Practical guidance for designing governed, inspectable AI workflows.
+
+## Selected articles
+
+- [Governed bank reconciliation](https://taskme.sh/blog/2026/governed-bank-reconciliation.html): A reference architecture for parallel accounting data retrieval, AI-assisted investigation, controlled record creation, and run evidence.
+- [Human approval in AI workflows](https://taskme.sh/blog/2026/human-approval-ai-workflows.html): Guidance for placing approval at meaningful decision boundaries and giving reviewers the context they need.
+- [Agents versus deterministic tools](https://taskme.sh/blog/2026/agents-vs-deterministic-tools.html): A framework for deciding which workflow steps need model reasoning and which should use code, rules, or APIs.
+
+## Terminology
+
+- Taskmesh: The product and platform name.
+- Workflow: A versioned graph of agents, tools, logic, and human tasks.
+- Human task: A workflow step that pauses execution for an authorized person’s decision.
+- Published version: An immutable workflow definition selected for controlled execution.
+- Tool: An approved operation a workflow can invoke, such as an API call or data transformation.
+
+## Integration policy
+
+Taskmesh interacts with external business platforms through their published APIs. Taskmesh workflows, scripts, and background jobs do not connect directly to an external platform’s database.

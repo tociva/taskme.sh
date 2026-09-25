@@ -1,0 +1,112 @@
+<!-- title: AI Agents vs Deterministic Workflow Tools | Taskmesh -->
+<!-- description: A practical framework for deciding when a workflow should use an AI agent and when rules, code, transformations, or API tools are the better choice. -->
+<!-- nav: blog -->
+<!-- type: article -->
+<!-- published: 2026-09-25 -->
+<!-- updated: 2026-09-25 -->
+<!-- author: Taskmesh -->
+
+<!-- taskmesh top section -->
+    <main id="main-content">
+      <article class="article-shell">
+        <header class="article-header">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><span>Workflow design</span>
+          </nav>
+          <p class="eyebrow">Workflow design</p>
+          <h1>Agents or deterministic tools? Choose the right step</h1>
+          <p class="article-deck">A reliable workflow does not ask an AI model to do everything. It uses reasoning for ambiguity and deterministic tools for operations that must be exact, repeatable, and constrained.</p>
+          <div class="article-meta">
+            <span>By Taskmesh</span>
+            <time datetime="2026-09-25">25 September 2026</time>
+            <span>7 minute read</span>
+          </div>
+        </header>
+
+        <div class="article-layout">
+          <aside class="article-toc" aria-label="Article contents">
+            <strong>In this article</strong>
+            <a href="#different-jobs">Different jobs</a>
+            <a href="#agent">When to use an agent</a>
+            <a href="#tool">When to use a tool</a>
+            <a href="#combine">How to combine them</a>
+            <a href="#evaluation">Evaluate each boundary</a>
+          </aside>
+
+          <div class="article-body">
+            <p class="article-lead">The question is not whether agents are better than traditional automation. The useful question is which parts of a process require interpretation and which parts require precision.</p>
+
+            <h2 id="different-jobs">Agents and tools solve different problems</h2>
+            <p>An agent can work with incomplete language, compare competing explanations, and adapt its plan as new evidence appears. A deterministic tool executes a defined operation with known inputs and outputs. Both are useful. Confusing their roles produces workflows that are either unnecessarily rigid or unnecessarily unpredictable.</p>
+
+            <div class="article-callout">
+              <strong>Design principle</strong>
+              <p>Let the agent decide what the evidence means. Let a governed tool decide how an approved operation is executed.</p>
+            </div>
+
+            <h2 id="agent">Use an agent when interpretation is the work</h2>
+            <p>Agents are a good fit when the step cannot be expressed as a stable set of rules without losing important context. Examples include explaining an accounting exception, classifying an unfamiliar request, comparing policy language with case details, or deciding which approved tools may help answer a question.</p>
+            <p>The agent still needs boundaries. Give it a defined objective, structured context, a limited tool catalog, an explicit output schema, and a clear rule for when it must stop or request human input.</p>
+
+            <h3>Signals that favor an agent</h3>
+            <ul>
+              <li>the input contains varied natural language or unstructured evidence;</li>
+              <li>multiple plausible explanations must be compared;</li>
+              <li>the next useful step depends on contextual judgment;</li>
+              <li>the result can be expressed as a recommendation or structured proposal; and</li>
+              <li>uncertainty can be surfaced rather than hidden.</li>
+            </ul>
+
+            <h2 id="tool">Use a deterministic tool when correctness is defined</h2>
+            <p>If the desired behavior can be described exactly, use code, a transformation, a decision node, or an API operation. A model should not calculate a tax total, build a signature, validate a JSON schema, enforce an amount threshold, or construct an HTTP request when ordinary software can do the job reliably.</p>
+            <p>Deterministic tools also provide the right boundary for external actions. An agent may propose creating a payment, but the payment tool should validate required fields, enforce the connection scope, call the published API, and return a structured result.</p>
+
+            <div class="article-table-wrap">
+              <table>
+                <thead><tr><th>Need</th><th>Prefer</th><th>Why</th></tr></thead>
+                <tbody>
+                  <tr><td>Interpret ambiguous descriptions</td><td>Agent</td><td>Meaning depends on context and competing evidence.</td></tr>
+                  <tr><td>Extract a known JSON path</td><td>Extractor</td><td>The expected field is explicit and repeatable.</td></tr>
+                  <tr><td>Reshape one contract into another</td><td>Transformer or Python</td><td>The mapping can be tested directly.</td></tr>
+                  <tr><td>Choose a branch from fixed conditions</td><td>Decision or switch</td><td>The policy is already known.</td></tr>
+                  <tr><td>Recommend a response to a novel case</td><td>Agent</td><td>The workflow needs contextual judgment.</td></tr>
+                  <tr><td>Create a record in another system</td><td>API tool</td><td>The action needs validation, permissions, and a stable result.</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="combine">The strongest pattern combines both</h2>
+            <p>A practical workflow often follows this sequence: deterministic tools gather and normalize data; an agent analyzes the prepared context; rules assess the proposal; a person reviews exceptions; and another deterministic tool performs the approved action.</p>
+            <p>This design is easier to inspect because each node has one responsibility. It is also easier to improve. Teams can change a prompt without rewriting API authentication, or change an integration without altering the agent’s reasoning contract.</p>
+
+            <ol class="article-steps">
+              <li><strong>Prepare.</strong><span>Fetch, extract, transform, and validate the context before it reaches the model.</span></li>
+              <li><strong>Reason.</strong><span>Ask the agent for a structured explanation, classification, or proposal.</span></li>
+              <li><strong>Control.</strong><span>Apply deterministic policy checks and request human review where required.</span></li>
+              <li><strong>Act.</strong><span>Execute through a scoped tool with explicit inputs and outputs.</span></li>
+              <li><strong>Inspect.</strong><span>Keep every node result associated with the published workflow version and run.</span></li>
+            </ol>
+
+            <h2 id="evaluation">Evaluate the boundaries, not only the final answer</h2>
+            <p>End-to-end success rates are important, but they do not reveal where a workflow is weak. Evaluate whether retrieval returned complete data, whether transformations preserved meaning, whether the agent followed its schema, whether controls routed cases correctly, and whether tools produced the expected external result.</p>
+            <p>Clear node boundaries make those evaluations possible. They also make failure recovery more precise: a tool can retry an API request without repeating analysis, and a reviewer can correct a proposal without rebuilding the entire run.</p>
+
+            <div class="article-conclusion">
+              <p class="eyebrow">The takeaway</p>
+              <h2>Use the least uncertain mechanism that can do the job.</h2>
+              <p>Agents are valuable precisely because some work is ambiguous. Preserve that advantage by surrounding them with deterministic preparation, policy, action, and evidence.</p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="article-related">
+          <p class="eyebrow">Continue reading</p>
+          <h2>Apply the pattern to a real process</h2>
+          <div class="article-related-links">
+            <a href="/blog/2026/governed-bank-reconciliation.html"><span>Finance operations</span>A practical architecture for governed bank reconciliation</a>
+            <a href="/blog/2026/human-approval-ai-workflows.html"><span>Governance</span>Where human approval belongs in an AI workflow</a>
+          </div>
+        </footer>
+      </article>
+    </main>
+<!-- taskmesh bottom section -->

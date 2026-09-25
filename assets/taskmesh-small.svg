@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <g fill="none" stroke="#1c383d" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Connecting Bracket Path -->
+    <path d="M 30 30 H 58 A 12 12 0 0 1 70 42 V 78 A 12 12 0 0 1 58 90 H 30" stroke-width="7" />
+    
+    <!-- Center Horizontal Connection -->
+    <path d="M 70 60 H 82" stroke-width="7" />
+    
+    <!-- Top Node Circle -->
+    <circle cx="30" cy="30" r="11" fill="#1c383d" stroke="none" />
+    
+    <!-- Bottom Node Circle -->
+    <circle cx="30" cy="90" r="11" fill="#1c383d" stroke="none" />
+    
+    <!-- Output Diamond -->
+    <polygon points="94,48 106,60 94,72 82,60" fill="#1c383d" stroke="none" />
+  </g>
+</svg>

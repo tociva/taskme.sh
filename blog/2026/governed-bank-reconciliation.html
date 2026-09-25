@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A practical architecture for reconciling bank transactions with parallel accounting data retrieval, interactive AI analysis, and controlled journal creation.">
+    <meta name="theme-color" content="#07111f">
+    <meta name="color-scheme" content="light">
+    <link rel="canonical" href="https://taskme.sh/blog/2026/governed-bank-reconciliation.html">
+    <title>Governed Bank Reconciliation with AI | Taskmesh</title>
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Taskmesh">
+    <meta property="og:title" content="Governed Bank Reconciliation with AI | Taskmesh">
+    <meta property="og:description" content="A practical architecture for reconciling bank transactions with parallel accounting data retrieval, interactive AI analysis, and controlled journal creation.">
+    <meta property="og:url" content="https://taskme.sh/blog/2026/governed-bank-reconciliation.html">
+    <meta property="article:published_time" content="2026-09-25">
+    <meta property="article:modified_time" content="2026-09-25">
+    <meta property="article:author" content="Taskmesh">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Governed Bank Reconciliation with AI | Taskmesh">
+    <meta name="twitter:description" content="A practical architecture for reconciling bank transactions with parallel accounting data retrieval, interactive AI analysis, and controlled journal creation.">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/taskmesh-small.svg">
+    <link rel="stylesheet" href="/styles.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://taskme.sh/#organization",
+      "name": "Taskmesh",
+      "url": "https://taskme.sh/",
+      "description": "Taskmesh is a platform for building, running, and governing AI agents and business workflows."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://taskme.sh/#website",
+      "url": "https://taskme.sh/",
+      "name": "Taskmesh",
+      "publisher": {
+        "@id": "https://taskme.sh/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://taskme.sh/blog/2026/governed-bank-reconciliation.html#webpage",
+      "url": "https://taskme.sh/blog/2026/governed-bank-reconciliation.html",
+      "name": "Governed Bank Reconciliation with AI | Taskmesh",
+      "description": "A practical architecture for reconciling bank transactions with parallel accounting data retrieval, interactive AI analysis, and controlled journal creation.",
+      "isPartOf": {
+        "@id": "https://taskme.sh/#website"
+      },
+      "about": {
+        "@id": "https://taskme.sh/#software"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://taskme.sh/blog/2026/governed-bank-reconciliation.html#article",
+      "headline": "Governed Bank Reconciliation with AI | Taskmesh",
+      "description": "A practical architecture for reconciling bank transactions with parallel accounting data retrieval, interactive AI analysis, and controlled journal creation.",
+      "datePublished": "2026-09-25",
+      "dateModified": "2026-09-25",
+      "author": {
+        "@type": "Organization",
+        "name": "Taskmesh",
+        "url": "https://taskme.sh/"
+      },
+      "publisher": {
+        "@id": "https://taskme.sh/#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://taskme.sh/blog/2026/governed-bank-reconciliation.html#webpage"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body class="page-blog page-article">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Taskmesh home">
+          <img class="brand-logo" src="/assets/taskmesh-logo-large.svg" width="372" height="120" alt="Taskmesh — Build. Connect. Run.">
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/product.html">Product</a>
+          <a href="/security.html">Security</a>
+          <a href="/integrations.html">Integrations</a>
+          <a href="/use-cases.html">Use cases</a>
+          <a href="/blog/" aria-current="page">Blog</a>
+        </nav>
+        <a class="header-cta" href="/product.html">See how it works <span aria-hidden="true">→</span></a>
+      </div>
+    </header>
+<main id="main-content">
+      <article class="article-shell">
+        <header class="article-header">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><span>Finance operations</span>
+          </nav>
+          <p class="eyebrow">Finance operations</p>
+          <h1>A practical architecture for governed bank reconciliation</h1>
+          <p class="article-deck">Bank reconciliation is a strong AI workflow candidate because the process mixes structured retrieval, deterministic comparison, contextual investigation, and accountable accounting action.</p>
+          <div class="article-meta">
+            <span>By Taskmesh</span>
+            <time datetime="2026-09-25">25 September 2026</time>
+            <span>8 minute read</span>
+          </div>
+        </header>
+
+        <div class="article-layout">
+          <aside class="article-toc" aria-label="Article contents">
+            <strong>In this article</strong>
+            <a href="#why-workflow">Why use a workflow?</a>
+            <a href="#architecture">Reference architecture</a>
+            <a href="#agent-role">The agent’s role</a>
+            <a href="#control-boundaries">Control boundaries</a>
+            <a href="#evidence">Evidence after the run</a>
+          </aside>
+
+          <div class="article-body">
+            <p class="article-lead">A bank statement rarely tells the complete accounting story. A transaction may correspond to a payment, receipt, contra entry, journal, or a combination of records. When something is missing, the difficult part is not fetching more data. It is deciding what the evidence supports and what action is safe.</p>
+
+            <h2 id="why-workflow">Why reconciliation should be a workflow</h2>
+            <p>A single prompt can describe a reconciliation problem, but it cannot provide the operational guarantees that the process needs. The system must know which records were retrieved, which period and organization they belong to, which rules were applied, and whether a person approved any proposed accounting change.</p>
+            <p>A workflow makes those responsibilities explicit. Deterministic steps retrieve and normalize data. An agent handles interpretation. A controlled tool creates approved records. The run history preserves how the outcome was produced.</p>
+
+            <div class="article-callout">
+              <strong>Design principle</strong>
+              <p>Use AI to investigate ambiguity. Use tools and workflow rules to control access, mutation, and completion.</p>
+            </div>
+
+            <h2 id="architecture">A reference architecture</h2>
+            <p>The workflow can begin by retrieving five sources in parallel:</p>
+            <ul>
+              <li>bank transactions for the reconciliation period;</li>
+              <li>payments already recorded in the books;</li>
+              <li>receipts already recorded in the books;</li>
+              <li>contra entries between cash and bank accounts; and</li>
+              <li>journals that may explain fees, interest, adjustments, or transfers.</li>
+            </ul>
+            <p>Parallel retrieval reduces unnecessary waiting and keeps every source independent. Each tool returns a structured result with its own status and diagnostics. A merge step then assembles those outputs into one analysis input.</p>
+
+            <ol class="article-steps">
+              <li><strong>Start with explicit scope.</strong><span>Organization, bank account, book, currency, and reconciliation period should be workflow inputs—not assumptions inside a prompt.</span></li>
+              <li><strong>Fetch each source separately.</strong><span>Independent tool calls make failures visible and prevent one missing source from being mistaken for an empty dataset.</span></li>
+              <li><strong>Merge into a stable contract.</strong><span>The agent should receive named collections with consistent fields rather than raw provider responses.</span></li>
+              <li><strong>Investigate unmatched items.</strong><span>The agent compares amounts, dates, descriptions, references, and counterparty context.</span></li>
+              <li><strong>Create only through approved tools.</strong><span>Payments, receipts, contra entries, and supporting journals are external actions with explicit inputs and permissions.</span></li>
+            </ol>
+
+            <h2 id="agent-role">What the interactive agent should do</h2>
+            <p>The agent’s job is to form and test explanations for unmatched transactions. It can propose that a debit is a supplier payment, that a credit is a customer receipt, or that two transactions represent a transfer between owned accounts. It should also be able to say that the available evidence is insufficient.</p>
+            <p>For each proposed record, capture the source transaction, the reasoning summary, the expected accounting effect, and a confidence or review signal. The proposal should be structured data that the workflow can validate—not prose that another step must interpret.</p>
+
+            <h3>Supporting journals deserve a separate step</h3>
+            <p>Some unmatched transactions need an additional journal rather than a payment or receipt. Bank charges, interest, exchange differences, and rounding adjustments are common examples. Keeping supporting journals in a separate workflow step makes their creation visible and lets the organization apply different approval rules.</p>
+
+            <h2 id="control-boundaries">Place controls around actions, not analysis</h2>
+            <p>Reading records and calculating differences are usually lower-risk than creating accounting entries. The workflow should reflect that distinction. Retrieval and analysis may run automatically, while material or low-confidence proposals pause for review.</p>
+
+            <div class="article-table-wrap">
+              <table>
+                <thead><tr><th>Step</th><th>Primary control</th><th>Reason</th></tr></thead>
+                <tbody>
+                  <tr><td>Fetch records</td><td>Scoped connection</td><td>Limits the organization, resource, and operation.</td></tr>
+                  <tr><td>Analyze exceptions</td><td>Structured input and output</td><td>Keeps model behavior inside an explicit contract.</td></tr>
+                  <tr><td>Create entries</td><td>Permission and approval</td><td>Prevents analysis from silently becoming mutation.</td></tr>
+                  <tr><td>Complete the run</td><td>Reconciliation checks</td><td>Confirms that outputs balance and required work finished.</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="evidence">Preserve evidence after the workflow ends</h2>
+            <p>A reconciliation result should answer more than “did it succeed?” Operators need to know which published workflow version ran, which records were retrieved, which transactions remained unmatched, what the agent proposed, who approved the resulting entries, and which API operations executed.</p>
+            <p>This is why workflow versioning and node-level results matter. They turn reconciliation from an AI-generated conclusion into an inspectable business process.</p>
+
+            <div class="article-conclusion">
+              <p class="eyebrow">The takeaway</p>
+              <h2>Make the evidence path as explicit as the accounting path.</h2>
+              <p>The best use of AI in reconciliation is not unrestricted bookkeeping. It is disciplined investigation inside a workflow that already knows how data is fetched, how actions are authorized, and how outcomes are recorded.</p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="article-related">
+          <p class="eyebrow">Continue reading</p>
+          <h2>Design the next control boundary</h2>
+          <div class="article-related-links">
+            <a href="/blog/2026/human-approval-ai-workflows.html"><span>Governance</span>Where human approval belongs in an AI workflow</a>
+            <a href="/blog/2026/agents-vs-deterministic-tools.html"><span>Workflow design</span>Agents or deterministic tools?</a>
+          </div>
+        </footer>
+      </article>
+    </main>
+<footer class="site-footer">
+      <div class="shell footer-main">
+        <div class="footer-intro">
+          <a class="brand brand-inverse" href="/" aria-label="Taskmesh home">
+            <img class="brand-logo" src="/assets/taskmesh-logo-large.svg" width="372" height="120" alt="Taskmesh — Build. Connect. Run.">
+          </a>
+          <p>Governed AI workflows for real business operations.</p>
+        </div>
+        <div class="footer-group">
+          <h2>Explore</h2>
+          <a href="/product.html">Product</a>
+          <a href="/integrations.html">Integrations</a>
+          <a href="/use-cases.html">Use cases</a>
+          <a href="/blog/">Blog</a>
+        </div>
+        <div class="footer-group">
+          <h2>Trust</h2>
+          <a href="/security.html">Security</a>
+          <a href="/security.html#approvals">Human approvals</a>
+          <a href="/security.html#auditability">Auditability</a>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <p>&copy; 2026 Taskmesh. All rights reserved.</p>
+        <p>AI where it helps. Control where it matters.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!-- title: Security and Governance | Taskmesh -->
+<!-- description: Learn how Taskmesh governs AI workflows with scoped access, human approvals, immutable versions, API-only integrations, audit history, and isolated Python. -->
+<!-- nav: security -->
+
+<!-- taskmesh top section -->
+    <main id="main-content">
+      <section class="page-hero">
+        <div class="shell">
+          <p class="eyebrow">Security and governance</p>
+          <h1>Control is part of the workflow.</h1>
+          <p class="lede">Taskmesh is designed around explicit permissions, review boundaries, stable releases, and inspectable execution—not trust in an opaque agent.</p>
+          <div class="button-row"><a class="button button-primary" href="#principles">Review the principles</a></div>
+        </div>
+      </section>
+
+      <section class="page-section" id="principles">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Governance model</p>
+            <h2>Separate who can build, approve, and act.</h2>
+            <p>Responsible automation starts with clear boundaries. Taskmesh keeps organizational access, workflow publication, credentials, and runtime decisions within explicit scopes.</p>
+          </div>
+          <div class="three-grid usecase-grid">
+            <article class="info-card"><span class="card-number">01</span><h3>Organization scope</h3><p>Members, agents, tools, workflows, credentials, and runs belong to an explicit organizational workspace.</p></article>
+            <article class="info-card"><span class="card-number">02</span><h3>Permission boundaries</h3><p>Authoring, testing, publishing, execution, approval, and source viewing can remain separate responsibilities.</p></article>
+            <article class="info-card"><span class="card-number">03</span><h3>Credential isolation</h3><p>Workflows use configured connections without exposing stored secrets as ordinary workflow data.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section page-section-soft" id="approvals">
+        <div class="shell split-section">
+          <div class="section-heading">
+            <p class="eyebrow">Human approval</p>
+            <h2>Pause before the action that matters.</h2>
+            <p>A human task can stop a workflow at a deliberate checkpoint, present relevant context to an authorized reviewer, and continue only with the selected response.</p>
+          </div>
+          <div class="feature-list">
+            <article class="feature-row"><h3>Present</h3><p>Show the reviewer the decision, supporting data, and available options.</p></article>
+            <article class="feature-row"><h3>Authorize</h3><p>Require the decision from a user with the appropriate organizational access.</p></article>
+            <article class="feature-row"><h3>Record</h3><p>Associate the response and resulting path with the workflow run.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="auditability">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Auditability</p>
+            <h2>Preserve how a result was produced.</h2>
+            <p>Taskmesh keeps the workflow version, node path, step results, approval context, and execution status together so operators can understand the complete run.</p>
+          </div>
+          <div class="architecture-map" aria-label="Auditable workflow execution sequence">
+            <div>Published version</div>
+            <div>Validated input</div>
+            <div>Node results</div>
+            <div>Human decision</div>
+            <div>Final outcome</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section page-section-dark">
+        <div class="shell split-section">
+          <div class="section-heading">
+            <p class="eyebrow">Execution isolation</p>
+            <h2>Code runs as a constrained workload.</h2>
+            <p>The Python tool is designed for pure computation. Source revisions are pinned at publication and executed in an isolated gVisor sandbox.</p>
+          </div>
+          <ul class="security-list">
+            <li>No outbound network access</li>
+            <li>No workflow credential access</li>
+            <li>No mounted organization resources</li>
+            <li>No mutable root filesystem</li>
+            <li>No native-runtime fallback</li>
+            <li>Separate author, test, view, and publish permissions</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Integration boundary</p>
+            <h2>Connect through published APIs, not back doors.</h2>
+            <p>Taskmesh integrations communicate with external business platforms through their published APIs. Workflows, scripts, and background jobs do not connect directly to an external platform’s database.</p>
+          </div>
+          <div class="three-grid usecase-grid">
+            <article class="info-card"><span class="card-icon">API</span><h3>Explicit operations</h3><p>Select which API actions are available instead of granting broad, undefined access.</p></article>
+            <article class="info-card"><span class="card-icon">KEY</span><h3>Configured connections</h3><p>Keep authentication configuration outside ordinary workflow definitions and inputs.</p></article>
+            <article class="info-card"><span class="card-icon">LOG</span><h3>Invocation context</h3><p>Associate tool execution with the organization, workflow version, and run that requested it.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section page-section-soft">
+        <div class="shell callout">
+          <div><h2>Design the control path alongside the automation.</h2><p>See how workflow composition, stable publishing, and run inspection work together.</p></div>
+          <div class="button-row"><a class="button button-primary" href="/product.html">Explore the platform <span aria-hidden="true">→</span></a></div>
+        </div>
+      </section>
+    </main>
+<!-- taskmesh bottom section -->

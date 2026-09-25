@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn where human approval adds meaningful control in an AI workflow, what context reviewers need, and how to avoid approval fatigue.">
+    <meta name="theme-color" content="#07111f">
+    <meta name="color-scheme" content="light">
+    <link rel="canonical" href="https://taskme.sh/blog/2026/human-approval-ai-workflows.html">
+    <title>Human Approval in AI Workflows | Taskmesh</title>
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Taskmesh">
+    <meta property="og:title" content="Human Approval in AI Workflows | Taskmesh">
+    <meta property="og:description" content="Learn where human approval adds meaningful control in an AI workflow, what context reviewers need, and how to avoid approval fatigue.">
+    <meta property="og:url" content="https://taskme.sh/blog/2026/human-approval-ai-workflows.html">
+    <meta property="article:published_time" content="2026-09-25">
+    <meta property="article:modified_time" content="2026-09-25">
+    <meta property="article:author" content="Taskmesh">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Human Approval in AI Workflows | Taskmesh">
+    <meta name="twitter:description" content="Learn where human approval adds meaningful control in an AI workflow, what context reviewers need, and how to avoid approval fatigue.">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/taskmesh-small.svg">
+    <link rel="stylesheet" href="/styles.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://taskme.sh/#organization",
+      "name": "Taskmesh",
+      "url": "https://taskme.sh/",
+      "description": "Taskmesh is a platform for building, running, and governing AI agents and business workflows."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://taskme.sh/#website",
+      "url": "https://taskme.sh/",
+      "name": "Taskmesh",
+      "publisher": {
+        "@id": "https://taskme.sh/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://taskme.sh/blog/2026/human-approval-ai-workflows.html#webpage",
+      "url": "https://taskme.sh/blog/2026/human-approval-ai-workflows.html",
+      "name": "Human Approval in AI Workflows | Taskmesh",
+      "description": "Learn where human approval adds meaningful control in an AI workflow, what context reviewers need, and how to avoid approval fatigue.",
+      "isPartOf": {
+        "@id": "https://taskme.sh/#website"
+      },
+      "about": {
+        "@id": "https://taskme.sh/#software"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://taskme.sh/blog/2026/human-approval-ai-workflows.html#article",
+      "headline": "Human Approval in AI Workflows | Taskmesh",
+      "description": "Learn where human approval adds meaningful control in an AI workflow, what context reviewers need, and how to avoid approval fatigue.",
+      "datePublished": "2026-09-25",
+      "dateModified": "2026-09-25",
+      "author": {
+        "@type": "Organization",
+        "name": "Taskmesh",
+        "url": "https://taskme.sh/"
+      },
+      "publisher": {
+        "@id": "https://taskme.sh/#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://taskme.sh/blog/2026/human-approval-ai-workflows.html#webpage"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body class="page-blog page-article">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Taskmesh home">
+          <img class="brand-logo" src="/assets/taskmesh-logo-large.svg" width="372" height="120" alt="Taskmesh — Build. Connect. Run.">
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/product.html">Product</a>
+          <a href="/security.html">Security</a>
+          <a href="/integrations.html">Integrations</a>
+          <a href="/use-cases.html">Use cases</a>
+          <a href="/blog/" aria-current="page">Blog</a>
+        </nav>
+        <a class="header-cta" href="/product.html">See how it works <span aria-hidden="true">→</span></a>
+      </div>
+    </header>
+<main id="main-content">
+      <article class="article-shell">
+        <header class="article-header">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><span>Governance</span>
+          </nav>
+          <p class="eyebrow">Governance</p>
+          <h1>Where human approval belongs in an AI workflow</h1>
+          <p class="article-deck">A useful approval step protects a real decision boundary. A poorly placed one adds delay while giving the reviewer too little context to exercise meaningful control.</p>
+          <div class="article-meta">
+            <span>By Taskmesh</span>
+            <time datetime="2026-09-25">25 September 2026</time>
+            <span>7 minute read</span>
+          </div>
+        </header>
+
+        <div class="article-layout">
+          <aside class="article-toc" aria-label="Article contents">
+            <strong>In this article</strong>
+            <a href="#decision-boundary">Find the decision boundary</a>
+            <a href="#review-context">Give reviewers context</a>
+            <a href="#approval-fatigue">Avoid approval fatigue</a>
+            <a href="#responses">Constrain responses</a>
+            <a href="#audit">Preserve the decision</a>
+          </aside>
+
+          <div class="article-body">
+            <p class="article-lead">“Put a human in the loop” sounds like a complete safety strategy. It is not. The value of human approval depends on where the workflow pauses, what the reviewer can see, which responses are available, and what happens after the decision.</p>
+
+            <h2 id="decision-boundary">Start with the decision boundary</h2>
+            <p>Do not add approval merely because a workflow uses AI. Add it where the process crosses from analysis into an action with consequences. Sending a payment, changing a customer record, publishing a result, or creating an accounting entry are boundaries. Extracting fields from a document usually is not.</p>
+            <p>This distinction keeps low-risk work moving while concentrating human attention where it changes the outcome.</p>
+
+            <div class="article-callout">
+              <strong>Useful question</strong>
+              <p>If this step is wrong, what becomes difficult to reverse? Place review before that point.</p>
+            </div>
+
+            <h2 id="review-context">Approval requires decision-ready context</h2>
+            <p>A reviewer should not have to reconstruct the workflow from raw logs. The approval request should explain the proposed action, the evidence supporting it, the policy or threshold involved, and the consequences of each response.</p>
+            <p>For an invoice exception, this may include the supplier, invoice amount, purchase-order match, duplicate indicators, account coding, and the exact operation that will run after approval. For a bank reconciliation, it may include the source transaction and the proposed payment, receipt, contra entry, or journal.</p>
+
+            <h3>A compact approval payload</h3>
+            <ul>
+              <li>a plain-language title describing the decision;</li>
+              <li>a structured summary of the affected record;</li>
+              <li>the agent’s recommendation and concise reasoning;</li>
+              <li>policy flags, thresholds, and validation results;</li>
+              <li>the operation that approval will authorize; and</li>
+              <li>clear response choices and their effect.</li>
+            </ul>
+
+            <h2 id="approval-fatigue">Avoid approval fatigue</h2>
+            <p>If every item requires approval, reviewers learn to click through the queue. The workflow technically contains a person, but the control has become ceremonial.</p>
+            <p>Use deterministic rules to separate routine items from exceptions. Amount thresholds, confidence bands, policy violations, unusual counterparties, missing documents, or conflicting source data can decide which cases deserve attention. High-confidence, reversible work may continue automatically. Material or ambiguous work should wait.</p>
+
+            <div class="article-table-wrap">
+              <table>
+                <thead><tr><th>Situation</th><th>Suggested handling</th></tr></thead>
+                <tbody>
+                  <tr><td>Deterministic validation passes and action is reversible</td><td>Continue automatically and retain the run record.</td></tr>
+                  <tr><td>Confidence is low or sources conflict</td><td>Ask a reviewer to choose or request more information.</td></tr>
+                  <tr><td>Action crosses a material threshold</td><td>Require the designated role or an additional approval.</td></tr>
+                  <tr><td>Required context is missing</td><td>Stop and resolve the missing input rather than approve blindly.</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="responses">Constrain the response space</h2>
+            <p>Free-form comments are valuable context, but they should not be the only control. Define allowed responses such as approve, reject, request changes, choose a branch, or supply a required value. Each response should map to an explicit continuation in the workflow.</p>
+            <p>This makes the process predictable. The reviewer understands what will happen, the workflow knows which path to follow, and the audit record contains a clear decision rather than an ambiguous note.</p>
+
+            <h2 id="audit">Preserve the decision with the run</h2>
+            <p>An approval record is meaningful only when it remains connected to the workflow version, proposed action, reviewer, timestamp, response, and executed result. Saving a detached “approved” flag is not enough when the underlying proposal can change.</p>
+            <p>Published workflow versions help here. They ensure the reviewer is authorizing a known process and that later edits do not rewrite the meaning of an earlier decision.</p>
+
+            <div class="article-conclusion">
+              <p class="eyebrow">The takeaway</p>
+              <h2>Human approval is a designed interface, not a checkbox.</h2>
+              <p>Place it immediately before consequential action, present decision-ready context, route only meaningful exceptions, and preserve the response with the complete run.</p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="article-related">
+          <p class="eyebrow">Continue reading</p>
+          <h2>Connect approval to the wider workflow</h2>
+          <div class="article-related-links">
+            <a href="/blog/2026/governed-bank-reconciliation.html"><span>Finance operations</span>A practical architecture for governed bank reconciliation</a>
+            <a href="/blog/2026/agents-vs-deterministic-tools.html"><span>Workflow design</span>Agents or deterministic tools?</a>
+          </div>
+        </footer>
+      </article>
+    </main>
+<footer class="site-footer">
+      <div class="shell footer-main">
+        <div class="footer-intro">
+          <a class="brand brand-inverse" href="/" aria-label="Taskmesh home">
+            <img class="brand-logo" src="/assets/taskmesh-logo-large.svg" width="372" height="120" alt="Taskmesh — Build. Connect. Run.">
+          </a>
+          <p>Governed AI workflows for real business operations.</p>
+        </div>
+        <div class="footer-group">
+          <h2>Explore</h2>
+          <a href="/product.html">Product</a>
+          <a href="/integrations.html">Integrations</a>
+          <a href="/use-cases.html">Use cases</a>
+          <a href="/blog/">Blog</a>
+        </div>
+        <div class="footer-group">
+          <h2>Trust</h2>
+          <a href="/security.html">Security</a>
+          <a href="/security.html#approvals">Human approvals</a>
+          <a href="/security.html#auditability">Auditability</a>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <p>&copy; 2026 Taskmesh. All rights reserved.</p>
+        <p>AI where it helps. Control where it matters.</p>
+      </div>
+    </footer>
+  </body>
+</html>

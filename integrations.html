@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Connect Taskmesh workflows to published APIs, secure credentials, JSON extraction, JSON transformation, and internal applications through governed operations.">
+    <meta name="theme-color" content="#07111f">
+    <meta name="color-scheme" content="light">
+    <link rel="canonical" href="https://taskme.sh/integrations.html">
+    <title>API and Data Integrations | Taskmesh</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Taskmesh">
+    <meta property="og:title" content="API and Data Integrations | Taskmesh">
+    <meta property="og:description" content="Connect Taskmesh workflows to published APIs, secure credentials, JSON extraction, JSON transformation, and internal applications through governed operations.">
+    <meta property="og:url" content="https://taskme.sh/integrations.html">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="API and Data Integrations | Taskmesh">
+    <meta name="twitter:description" content="Connect Taskmesh workflows to published APIs, secure credentials, JSON extraction, JSON transformation, and internal applications through governed operations.">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/taskmesh-small.svg">
+    <link rel="stylesheet" href="/styles.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://taskme.sh/#organization",
+      "name": "Taskmesh",
+      "url": "https://taskme.sh/",
+      "description": "Taskmesh is a platform for building, running, and governing AI agents and business workflows."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://taskme.sh/#website",
+      "url": "https://taskme.sh/",
+      "name": "Taskmesh",
+      "publisher": {
+        "@id": "https://taskme.sh/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://taskme.sh/integrations.html#webpage",
+      "url": "https://taskme.sh/integrations.html",
+      "name": "API and Data Integrations | Taskmesh",
+      "description": "Connect Taskmesh workflows to published APIs, secure credentials, JSON extraction, JSON transformation, and internal applications through governed operations.",
+      "isPartOf": {
+        "@id": "https://taskme.sh/#website"
+      },
+      "about": {
+        "@id": "https://taskme.sh/#software"
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body class="page-integrations">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Taskmesh home">
+          <img class="brand-logo" src="/assets/taskmesh-logo-large.svg" width="372" height="120" alt="Taskmesh — Build. Connect. Run.">
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/product.html">Product</a>
+          <a href="/security.html">Security</a>
+          <a href="/integrations.html" aria-current="page">Integrations</a>
+          <a href="/use-cases.html">Use cases</a>
+          <a href="/blog/">Blog</a>
+        </nav>
+        <a class="header-cta" href="/product.html">See how it works <span aria-hidden="true">→</span></a>
+      </div>
+    </header>
+<main id="main-content">
+      <section class="page-hero">
+        <div class="shell">
+          <p class="eyebrow">Integrations</p>
+          <h1>Give workflows the tools they need—and nothing more.</h1>
+          <p class="lede">Turn approved API operations and data transformations into reusable workflow tools with explicit connections, inputs, and outputs.</p>
+          <div class="button-row"><a class="button button-primary" href="#catalog">Explore the tool catalog</a></div>
+        </div>
+      </section>
+
+      <section class="page-section" id="catalog">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Tool catalog</p>
+            <h2>Reliable building blocks for connected workflows.</h2>
+            <p>Keep external actions and data shaping explicit, testable, and reusable across workflow definitions.</p>
+          </div>
+          <div class="integration-catalog">
+            <article class="integration-card">
+              <header><span class="integration-symbol">HTTP</span><h3>Custom API</h3></header>
+              <p>Import an OpenAPI description or define an HTTP operation, configure its connection, and expose the approved action to workflows.</p>
+              <div class="pill-list"><span>OpenAPI</span><span>Authentication</span><span>Inputs</span><span>Responses</span></div>
+            </article>
+            <article class="integration-card">
+              <header><span class="integration-symbol">PATH</span><h3>JSON extractor</h3></header>
+              <p>Select specific values from structured output using explicit paths, then give downstream nodes a smaller, stable result.</p>
+              <div class="pill-list"><span>Field selection</span><span>Stable outputs</span><span>Reusable operation</span></div>
+            </article>
+            <article class="integration-card">
+              <header><span class="integration-symbol">{ }</span><h3>JSON transformer</h3></header>
+              <p>Reshape data between systems with a defined transformation and preview the result before using it in a workflow.</p>
+              <div class="pill-list"><span>JSONata</span><span>Preview</span><span>Versioned operation</span></div>
+            </article>
+            <article class="integration-card">
+              <header><span class="integration-symbol">PY</span><h3>Python tool</h3></header>
+              <p>Perform focused computation with Python, NumPy, and pandas inside a network-isolated sandbox.</p>
+              <div class="pill-list"><span>Pure compute</span><span>Immutable revision</span><span>gVisor sandbox</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section page-section-soft">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Connection lifecycle</p>
+            <h2>From API description to governed workflow action.</h2>
+            <p>Taskmesh separates the reusable operation, organization-specific connection, workflow mapping, and individual invocation.</p>
+          </div>
+          <div class="steps">
+            <article class="step"><span>01</span><h3>Describe</h3><p>Define the API operation and its request and response shapes.</p></article>
+            <article class="step"><span>02</span><h3>Configure</h3><p>Attach the organization’s endpoint and authentication method.</p></article>
+            <article class="step"><span>03</span><h3>Grant</h3><p>Approve the operation and resources the installation may use.</p></article>
+            <article class="step"><span>04</span><h3>Map</h3><p>Bind workflow data to explicit tool inputs.</p></article>
+            <article class="step"><span>05</span><h3>Invoke</h3><p>Execute in the context of a versioned workflow run.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="shell split-section">
+          <div class="section-heading">
+            <p class="eyebrow">Integration policy</p>
+            <h2>Use the interface the system was designed to expose.</h2>
+            <p>Taskmesh works through published APIs. This preserves the external platform’s validation, permissions, lifecycle rules, and audit boundaries.</p>
+          </div>
+          <div class="feature-list">
+            <article class="feature-row"><h3>No direct database access</h3><p>External application databases remain behind the application’s own service boundary.</p></article>
+            <article class="feature-row"><h3>Explicit resource grants</h3><p>An installation can be limited to approved operations and resources.</p></article>
+            <article class="feature-row"><h3>Validated runtime context</h3><p>Accepted context is checked against the selected published workflow before execution.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section page-section-dark">
+        <div class="shell security-panel">
+          <div class="security-copy">
+            <p class="eyebrow">Credential boundaries</p>
+            <h2>Connect without passing secrets through the graph.</h2>
+            <p>Credentials belong to configured connections and remain outside broadly readable workflow definitions and routine node output.</p>
+            <a class="text-link" href="/security.html">Review the security model <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="security-list">
+            <li>Organization-scoped connection configuration</li>
+            <li>Explicit credential requirements per operation</li>
+            <li>Server-side tool invocation</li>
+            <li>Workflow and run context attached to execution</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+<footer class="site-footer">
+      <div class="shell footer-main">
+        <div class="footer-intro">
+          <a class="brand brand-inverse" href="/" aria-label="Taskmesh home">
+            <img class="brand-logo" src="/assets/taskmesh-logo-large.svg" width="372" height="120" alt="Taskmesh — Build. Connect. Run.">
+          </a>
+          <p>Governed AI workflows for real business operations.</p>
+        </div>
+        <div class="footer-group">
+          <h2>Explore</h2>
+          <a href="/product.html">Product</a>
+          <a href="/integrations.html">Integrations</a>
+          <a href="/use-cases.html">Use cases</a>
+          <a href="/blog/">Blog</a>
+        </div>
+        <div class="footer-group">
+          <h2>Trust</h2>
+          <a href="/security.html">Security</a>
+          <a href="/security.html#approvals">Human approvals</a>
+          <a href="/security.html#auditability">Auditability</a>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <p>&copy; 2026 Taskmesh. All rights reserved.</p>
+        <p>AI where it helps. Control where it matters.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,281 @@
+<!-- title: Taskmesh | Governed AI Workflow Orchestration -->
+<!-- description: Build, approve, run, and audit AI-powered business workflows with Taskmesh. Connect agents, tools, APIs, and people in one governed platform. -->
+<!-- nav: home -->
+
+<!-- taskmesh top section -->
+    <main id="main-content">
+      <section class="home-hero">
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <span class="kicker">Governed AI workflow orchestration</span>
+            <h1>Build AI workflows your business can <em>trust.</em></h1>
+            <p>Design, approve, run, and monitor AI-powered workflows across APIs, business tools, and secure Python—without losing human control.</p>
+            <div class="button-row">
+              <a class="button button-primary" href="/product.html">Explore the product <span aria-hidden="true">→</span></a>
+              <a class="button button-secondary" href="/security.html">Review the security model</a>
+            </div>
+            <div class="hero-proof" aria-label="Platform principles">
+              <span>Human approvals</span>
+              <span>Versioned workflows</span>
+              <span>Auditable runs</span>
+            </div>
+          </div>
+
+          <figure class="workflow-window workflow-window-ledger" aria-labelledby="ledger-workflow-title ledger-workflow-description">
+            <div class="window-bar">
+              <span class="window-title" id="ledger-workflow-title">Books completion workflow</span>
+              <span class="window-status">Interactive · governed</span>
+            </div>
+            <div class="workflow-svg-wrap">
+              <svg class="workflow-diagram" viewBox="0 0 760 650" role="img" aria-labelledby="ledger-workflow-svg-title ledger-workflow-description">
+                <title id="ledger-workflow-svg-title">Books completion workflow</title>
+                <desc id="ledger-workflow-description">The workflow starts by fetching bank transactions, payments, receipts, contra entries, and journals in parallel. The results merge into an interactive agent that analyzes the books and creates missing payments, receipts, and contra entries. It then creates supporting journals and ends.</desc>
+                <defs>
+                  <marker id="workflow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8f9bad"></path>
+                  </marker>
+                </defs>
+
+                <g class="workflow-connectors" fill="none" stroke="#aeb9c8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M380 63 V92"></path>
+                  <path d="M82 92 H678"></path>
+                  <path d="M82 92 V124"></path>
+                  <path d="M231 92 V124"></path>
+                  <path d="M380 92 V124"></path>
+                  <path d="M529 92 V124"></path>
+                  <path d="M678 92 V124"></path>
+                  <path d="M82 206 V242"></path>
+                  <path d="M231 206 V242"></path>
+                  <path d="M380 206 V242"></path>
+                  <path d="M529 206 V242"></path>
+                  <path d="M678 206 V242"></path>
+                  <path d="M82 242 H678"></path>
+                  <path d="M380 242 V268" marker-end="url(#workflow-arrow)"></path>
+                  <path d="M380 316 V348" marker-end="url(#workflow-arrow)"></path>
+                  <path d="M380 480 V516" marker-end="url(#workflow-arrow)"></path>
+                  <path d="M380 580 V608" marker-end="url(#workflow-arrow)"></path>
+                </g>
+
+                <g class="workflow-flow-animation" aria-hidden="true">
+                  <path class="flow-stage-1" d="M380 63 V92"></path>
+                  <path class="flow-stage-1" d="M380 92 H82"></path>
+                  <path class="flow-stage-1" d="M380 92 H678"></path>
+
+                  <path class="flow-stage-2" d="M82 92 V124"></path>
+                  <path class="flow-stage-2" d="M231 92 V124"></path>
+                  <path class="flow-stage-2" d="M380 92 V124"></path>
+                  <path class="flow-stage-2" d="M529 92 V124"></path>
+                  <path class="flow-stage-2" d="M678 92 V124"></path>
+
+                  <path class="flow-stage-3" d="M82 206 V242 H380"></path>
+                  <path class="flow-stage-3" d="M231 206 V242 H380"></path>
+                  <path class="flow-stage-3" d="M380 206 V268"></path>
+                  <path class="flow-stage-3" d="M529 206 V242 H380"></path>
+                  <path class="flow-stage-3" d="M678 206 V242 H380"></path>
+
+                  <path class="flow-stage-4" d="M380 316 V348"></path>
+                  <path class="flow-stage-5" d="M380 480 V516"></path>
+                  <path class="flow-stage-6" d="M380 580 V608"></path>
+                </g>
+
+                <g class="workflow-start">
+                  <rect x="327" y="21" width="106" height="42" rx="21"></rect>
+                  <circle cx="351" cy="42" r="5"></circle>
+                  <text x="369" y="47">Start</text>
+                </g>
+
+                <g class="workflow-tool-node" transform="translate(18 124)">
+                  <rect width="128" height="82" rx="12"></rect>
+                  <text class="workflow-node-label" x="14" y="24">API tool</text>
+                  <text class="workflow-node-title" x="14" y="49"><tspan x="14">Fetch bank</tspan><tspan x="14" dy="18">transactions</tspan></text>
+                </g>
+                <g class="workflow-tool-node" transform="translate(167 124)">
+                  <rect width="128" height="82" rx="12"></rect>
+                  <text class="workflow-node-label" x="14" y="24">API tool</text>
+                  <text class="workflow-node-title" x="14" y="56">Fetch payments</text>
+                </g>
+                <g class="workflow-tool-node" transform="translate(316 124)">
+                  <rect width="128" height="82" rx="12"></rect>
+                  <text class="workflow-node-label" x="14" y="24">API tool</text>
+                  <text class="workflow-node-title" x="14" y="56">Fetch receipts</text>
+                </g>
+                <g class="workflow-tool-node" transform="translate(465 124)">
+                  <rect width="128" height="82" rx="12"></rect>
+                  <text class="workflow-node-label" x="14" y="24">API tool</text>
+                  <text class="workflow-node-title" x="14" y="56">Fetch contra</text>
+                </g>
+                <g class="workflow-tool-node" transform="translate(614 124)">
+                  <rect width="128" height="82" rx="12"></rect>
+                  <text class="workflow-node-label" x="14" y="24">API tool</text>
+                  <text class="workflow-node-title" x="14" y="56">Fetch journals</text>
+                </g>
+
+                <g class="workflow-merge">
+                  <path d="M380 268 L404 292 L380 316 L356 292 Z"></path>
+                  <text x="380" y="296" text-anchor="middle">Merge</text>
+                </g>
+
+                <g class="workflow-agent-node">
+                  <rect x="176" y="348" width="408" height="132" rx="18"></rect>
+                  <image href="/assets/taskmesh-small.svg" x="198" y="374" width="56" height="56"></image>
+                  <text class="workflow-agent-label" x="274" y="376">Interactive agent</text>
+                  <text class="workflow-agent-title" x="274" y="404">Analyze and create missing entries</text>
+                  <text class="workflow-agent-items" x="274" y="432"><tspan>Payments</tspan><tspan dx="20">Receipts</tspan><tspan dx="20">Contra</tspan></text>
+                  <rect class="workflow-agent-status" x="274" y="449" width="142" height="18" rx="9"></rect>
+                  <text class="workflow-agent-status-text" x="345" y="462" text-anchor="middle">Human-guided analysis</text>
+                </g>
+
+                <g class="workflow-journal-node">
+                  <rect x="247" y="516" width="266" height="64" rx="14"></rect>
+                  <text class="workflow-node-label" x="267" y="541">Accounting action</text>
+                  <text class="workflow-node-title" x="267" y="563">Create supporting journals</text>
+                </g>
+
+                <g class="workflow-end">
+                  <rect x="327" y="608" width="106" height="42" rx="21"></rect>
+                  <circle cx="351" cy="629" r="5"></circle>
+                  <text x="369" y="634">End</text>
+                </g>
+              </svg>
+            </div>
+            <figcaption class="workflow-caption">The animated path shows execution order; five accounting sources are fetched in parallel before analysis begins.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="principle-strip" aria-label="Workflow lifecycle">
+        <div class="shell principle-grid">
+          <div><strong>Connect</strong><span>APIs and tools</span></div>
+          <div><strong>Compose</strong><span>Agents and logic</span></div>
+          <div><strong>Approve</strong><span>Human decisions</span></div>
+          <div><strong>Execute</strong><span>Controlled actions</span></div>
+          <div><strong>Audit</strong><span>Every outcome</span></div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="shell split-section">
+          <div class="section-heading">
+            <p class="eyebrow">One operating layer</p>
+            <h2>Bring agents, tools, and people into the same workflow.</h2>
+            <p>Taskmesh gives teams a clear place to model how AI should participate in real operations—and where it must stop for a person, policy, or deterministic rule.</p>
+          </div>
+          <div class="capability-stack">
+            <article class="capability-card">
+              <span class="card-icon" aria-hidden="true">AI</span>
+              <div><h3>Reason with agents</h3><p>Use model-powered steps where interpretation and judgment add value.</p></div>
+            </article>
+            <article class="capability-card">
+              <span class="card-icon" aria-hidden="true">API</span>
+              <div><h3>Act through governed tools</h3><p>Connect published APIs and give each workflow only the operations it needs.</p></div>
+            </article>
+            <article class="capability-card">
+              <span class="card-icon" aria-hidden="true">OK</span>
+              <div><h3>Keep people in control</h3><p>Pause consequential work for review, capture the decision, and continue safely.</p></div>
+            </article>
+            <article class="capability-card">
+              <span class="card-icon" aria-hidden="true">PY</span>
+              <div><h3>Compute in isolation</h3><p>Run pure Python transformations in a dedicated sandbox without network or credential access.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section page-section-soft">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">From draft to evidence</p>
+            <h2>A workflow lifecycle built for dependable operations.</h2>
+            <p>Separate experimentation from production execution, then preserve the context needed to understand every run.</p>
+          </div>
+          <div class="steps">
+            <article class="step"><span>01</span><h3>Design</h3><p>Compose agents, tools, decisions, loops, and human tasks.</p></article>
+            <article class="step"><span>02</span><h3>Test</h3><p>Validate inputs, mappings, branches, and expected outputs.</p></article>
+            <article class="step"><span>03</span><h3>Publish</h3><p>Pin a stable, immutable version for controlled use.</p></article>
+            <article class="step"><span>04</span><h3>Run</h3><p>Execute with scoped credentials and required approvals.</p></article>
+            <article class="step"><span>05</span><h3>Inspect</h3><p>Review every step, decision, result, and failure.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section page-section-dark">
+        <div class="shell security-panel">
+          <div class="security-copy">
+            <p class="eyebrow">Control by design</p>
+            <h2>Move fast without making the workflow a black box.</h2>
+            <p>Taskmesh separates authoring, publishing, execution, and approval so teams can adopt AI without surrendering operational control.</p>
+            <a class="text-link" href="/security.html">Explore security and governance <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="security-list">
+            <li>Organization-scoped access and permissions</li>
+            <li>Explicit human approval before sensitive actions</li>
+            <li>Immutable published workflow versions</li>
+            <li>Credential isolation and API-only integrations</li>
+            <li>Detailed workflow-run history and audit context</li>
+            <li>Sandboxed Python without network access</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Built for operational work</p>
+            <h2>Automate the process, preserve the decision.</h2>
+            <p>Use Taskmesh where AI must work with business data, policies, APIs, and accountable human review.</p>
+          </div>
+          <div class="three-grid usecase-grid">
+            <article class="usecase-card">
+              <span class="usecase-label">Finance operations</span>
+              <div><h3>Reconcile records and resolve exceptions.</h3><p>Gather data, identify mismatches, propose a resolution, and route material changes for approval.</p></div>
+              <div class="usecase-path"><span>Fetch</span><span>Compare</span><span>Review</span><span>Record</span></div>
+            </article>
+            <article class="usecase-card">
+              <span class="usecase-label">Controlled actioning</span>
+              <div><h3>Let AI propose. Let policy decide.</h3><p>Place a human task or deterministic condition between model analysis and an external action.</p></div>
+              <div class="usecase-path"><span>Analyze</span><span>Approve</span><span>Execute</span></div>
+            </article>
+            <article class="usecase-card">
+              <span class="usecase-label">Data operations</span>
+              <div><h3>Shape complex data into reliable outputs.</h3><p>Extract, transform, validate, and merge API data into a stable contract for downstream work.</p></div>
+              <div class="usecase-path"><span>Extract</span><span>Transform</span><span>Validate</span><span>Publish</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section page-section-soft">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Questions</p>
+            <h2>What teams need to know.</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>What is Taskmesh?</summary>
+              <p>Taskmesh is a platform for creating, publishing, running, and monitoring AI-powered workflows. A workflow can combine agents, API tools, deterministic transformations, decisions, loops, and human approval steps.</p>
+            </details>
+            <details>
+              <summary>Does every workflow have to use an AI model?</summary>
+              <p>No. Taskmesh supports workflows that combine AI reasoning with deterministic tools and control-flow nodes. Teams can use a model only where it meaningfully improves the process.</p>
+            </details>
+            <details>
+              <summary>Can a person approve an action before it runs?</summary>
+              <p>Yes. Human-task nodes can pause a workflow, present the required context, collect an authorized decision, and preserve that decision with the run.</p>
+            </details>
+            <details>
+              <summary>How does Taskmesh connect to business systems?</summary>
+              <p>Taskmesh connects through published APIs and configured operations. Workflows do not need direct access to an external platform’s database.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="shell callout">
+          <div><h2>Give AI a clear role in your operations.</h2><p>See how Taskmesh turns agents, tools, approvals, and audit history into one controlled workflow.</p></div>
+          <div class="button-row"><a class="button button-primary" href="/product.html">See the platform <span aria-hidden="true">→</span></a></div>
+        </div>
+      </section>
+    </main>
+<!-- taskmesh bottom section -->
